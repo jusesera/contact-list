@@ -18,15 +18,15 @@ direccion : "carrera 2",
 ]
 function agregarContacto(nombre, apellido, telefono, ciudad, direccion) {
   contactos.push({nombre, apellido, telefono, ciudad, direccion});
-  console.log('Contacto agregado:',nombre, apellido, telefono, ciudad, direccion);
+  console.log("Contacto agregado:",nombre, apellido, telefono, ciudad, direccion);
 }
 function eliminarContacto(nombre) {
   const indice = contactos.findIndex(contacto => contacto.nombre === nombre);
     if (indice !== -1) {
     const contactoEliminado = contactos.splice(indice, 1);
-    console.log('Contacto eliminado:', contactoEliminado[0].nombre, contactoEliminado[0].telefono);
+    console.log("Contacto eliminado:", contactoEliminado[0].nombre, contactoEliminado[0].telefono);
   } else {
-    console.log('Contacto no encontrado:', nombre);
+    console.log("Contacto no encontrado:", nombre);
   }
 }
 agregarContacto("Eteban","Godoy Sanchez","321343456", "bogota","carrera 78");
@@ -37,4 +37,4 @@ agregarContacto("Pepito","Romero","146890573","Leticia","carrera 32");
 eliminarContacto("Pepito");
 eliminarContacto("Carlos");
 
-console.log('Lista de contactos:', contactos);
+console.log("Lista de contactos:", contactos);
